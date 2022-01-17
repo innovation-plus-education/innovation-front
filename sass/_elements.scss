@@ -1,0 +1,14 @@
+html {
+    body {
+        font-family: $font;
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: Bold;
+        }
+        h1,h2 {
+            color: $dark;
+        }
+        span {
+            font-style: italic;
+        }
+    }
+}
