@@ -10,5 +10,10 @@ html {
         span {
             font-style: italic;
         }
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 }

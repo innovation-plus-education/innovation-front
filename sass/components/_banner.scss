@@ -1,0 +1,14 @@
+.innovation-banner-row {
+    background-image: linear-gradient(to left, $cyan-light 34%, $cyan 109%);
+    display: flex;
+    height: 300px;
+    color: white;
+    justify-content: space-between;
+    .innovation-banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 600px;
+    }
+}
