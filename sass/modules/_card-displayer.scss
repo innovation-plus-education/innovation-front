@@ -1,0 +1,32 @@
+.card-display-container {
+    .card-displayer-row {
+        .card-displayer-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .card-displayer-image {
+               img {
+                border-radius: 50%;
+               } 
+               display: flex;
+               justify-content: center;
+            }
+            .card-displayer-paragraph {
+                margin: 1em;
+                color: $cyan-dark;
+                font-weight: 400;
+                max-height: 5em;
+                overflow-y: hidden;
+                background-color: $smoke;
+                padding: 0.5em;
+            }
+            h4 {
+                text-align: center;
+            }
+            .btn {
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+}

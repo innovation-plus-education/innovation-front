@@ -1,0 +1,20 @@
+.innovation-h-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    .innovation-circle {
+        padding: 10px;
+        border: none;
+        display: flex;
+        color: $cyan;
+        align-items: center;
+    }
+    .card-body {
+        justify-content: space-around;
+        background-color: $smoke;
+        color: $cyan-dark;
+        font-weight: 400;
+    }
+}

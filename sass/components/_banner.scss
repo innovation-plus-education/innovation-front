@@ -1,0 +1,11 @@
+.innovation-banner-row {
+    background-color: $cyan-dark;
+    display: flex;
+    height: 500px;
+    color: white;
+    justify-content: space-around;
+    .bg-dark {
+        background-color: $cyan-dark;
+        border: none;
+    }
+}
