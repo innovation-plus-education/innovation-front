@@ -2,23 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
 
-function Banner({ description, title }) {
+function Banner({ description, title, image }) {
   return (
     <div className="innovation-banner-row">
-      <div className="innovation-banner">
-        <h2>{title}</h2>
-        <p>{description}</p>
-      </div>
-      <div className="innovation-banner-logo">
-        <Card className="bg-dark text-white">
-          <Card.Img
-            src="/logo/innovation-plus-banner.png"
-            alt="Card image"
-            height={300}
-            width={600}
-          />
-        </Card>
-      </div>
+      <Card className="bg-dark text-white">
+        <Card.Img
+          src={`http://innovation.api.local${image.data[0].attributes.url}`}
+          alt="Card image"
+          height={500}
+        />
+        {/* <Card.ImgOverlay>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{description}</Card.Text>
+        </Card.ImgOverlay> */}
+      </Card>
     </div>
   );
 }

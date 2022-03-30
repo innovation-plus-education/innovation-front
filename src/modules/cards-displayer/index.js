@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import cardTypes from "../../types/cardType";
 
-function CardsDisplayer({ items }) {
+function CardsDisplayer({ items: { items } }) {
   return (
     <Container className="card-display-container">
       <Row xs={1} md={4} className="card-displayer-row">
@@ -11,11 +11,11 @@ function CardsDisplayer({ items }) {
           items.map((item) => (
             <Col>
               <div className="card-displayer-column">
-                <h4>{item.title}</h4>
+                <h5>{item.title}</h5>
                 <div className="card-displayer-image">
                   <img
                     className="card-displayer-image"
-                    src={item.image}
+                    src={item.image.data[0].attributes.name}
                     alt={item.title}
                   />
                 </div>

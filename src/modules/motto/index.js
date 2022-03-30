@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HorizontalCardComponent from "../../components/horizontal-card";
 import cardTypes from "../../types/cardType";
 
-function Motto({ items }) {
+function Motto({ items: { items, headline } }) {
   return (
     <div className="innovation-motto-col">
-      <h3>Nos valeurs</h3>
+      <h2>{headline}</h2>
       <Row md="3" xs="1" id="innovation-motto-row">
         {items.map((item) => (
           <Col>
@@ -16,7 +16,7 @@ function Motto({ items }) {
               <div id="motto-icon">
                 <FontAwesomeIcon icon={["fas", `${item.icon}`]} size="2x" />
               </div>
-              <h4 className="subtitle">{item.title}</h4>
+              <h5 className="subtitle">{item.title}</h5>
             </div>
             <HorizontalCardComponent
               description={item.description}
