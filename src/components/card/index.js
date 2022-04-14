@@ -9,7 +9,7 @@ function CardComponent({ title, description, link, image }) {
       {image && <Card.Img variant="top" src={image} />}
       <Card.Body>
         <Card.Text>{description}</Card.Text>
-        <Card.Link>{link}</Card.Link>
+        {link && <Card.Link>{link}</Card.Link>}{" "}
       </Card.Body>
     </Card>
   );
