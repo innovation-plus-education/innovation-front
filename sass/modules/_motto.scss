@@ -12,11 +12,11 @@
             align-items: center;
             justify-content: center;
         }
-        #motto-header {
+        .motto-header {
             display: flex;
             justify-content: start;
             align-items: center;
-            #motto-icon {
+            .motto-icon {
                 margin-right: 0.5em;
                 border-radius: 50%;
                 background-color: $cyan-smooke;

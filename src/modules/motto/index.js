@@ -12,8 +12,8 @@ function Motto({ items: { items, headline } }) {
       <Row md="3" xs="1" id="innovation-motto-row">
         {items.map((item) => (
           <Col>
-            <div id="motto-header">
-              <div id="motto-icon">
+            <div className="motto-header">
+              <div className="motto-icon">
                 <FontAwesomeIcon icon={["fas", `${item.icon}`]} size="2x" />
               </div>
               <h5 className="subtitle">{item.title}</h5>
