@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Col } from "react-bootstrap";
+import TextBloc from "../text-boc";
 
 function VerticalBloc({ title, description, btnTitle, image, className }) {
   return (
@@ -10,7 +11,9 @@ function VerticalBloc({ title, description, btnTitle, image, className }) {
         <div className="v-b-image">
           <img className="v-b-image" src={image} alt={title} />
         </div>
-        {description && <p className="v-b-paragraph">{description}</p>}
+        {description && (
+          <TextBloc className="v-b-paragraph" text={description} />
+        )}
         {btnTitle && <Button variant="innovation-dark">{btnTitle}</Button>}
       </div>
     </Col>
@@ -28,6 +31,7 @@ VerticalBloc.propTypes = {
   description: PropTypes.string,
   btnTitle: PropTypes.string,
   image: PropTypes.string.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
+
 export default VerticalBloc;
