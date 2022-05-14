@@ -7,6 +7,7 @@ import CardsDisplayer from "../src/modules/cards-displayer";
 import Motto from "../src/modules/motto";
 import InfoBloc from "../src/modules/info-bloc";
 
+// eslint-disable-next-line react/prop-types
 export default function HomePage({ homepageComponents }) {
   const {
     data: {

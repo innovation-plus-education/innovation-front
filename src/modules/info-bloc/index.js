@@ -13,7 +13,7 @@ function infoBloc({ item: { item } }) {
         <div className="info-bloc-image">
           <img
             className="info-bloc-image"
-            src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.image.data[0].attributes.formats.thumbnail.url}`}
+            src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.image.data.attributes.formats.thumbnail.url}`}
             alt={item.title}
           />
         </div>

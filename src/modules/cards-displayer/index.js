@@ -15,7 +15,7 @@ function CardsDisplayer({ items: { items } }) {
                 <div className="card-displayer-image">
                   <img
                     className="card-displayer-image"
-                    src={item.image.data[0].attributes.name}
+                    src={item.image.data.attributes.name}
                     alt={item.title}
                   />
                 </div>

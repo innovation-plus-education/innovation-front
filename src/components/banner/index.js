@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
@@ -7,7 +9,7 @@ function Banner({ description, title, image }) {
     <div className="innovation-banner-row">
       <Card className="bg-dark text-white">
         <Card.Img
-          src={`http://innovation.api.local${image.data[0].attributes.url}`}
+          src={`http://innovation.api.local${image.data.attributes.url}`}
           alt="Card image"
           height={500}
         />
