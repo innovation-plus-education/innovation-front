@@ -1,25 +1,46 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import getMediaUrl from "../utils/getMediaUrl";
 
-function NavBar() {
+function NavBar({ navbar: { homepage, navigables } }) {
   return (
     <Navbar bg="innovation-secondary" expand="lg" className="innovation-navbar">
       <Container>
-        <Navbar.Brand href="#home">INNOVATION</Navbar.Brand>
+        <Navbar.Brand href={homepage.link}>
+          <img
+            src={getMediaUrl(homepage.logo)}
+            width="30"
+            height="30"
+            alt={homepage.link}
+          />
+          INNOVATION
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto" />
           <Nav>
-            <Nav.Link href="#home">ECOLES</Nav.Link>
-            <Nav.Link href="#link">COURS</Nav.Link>
-            <Nav.Link href="#link">SUJETS</Nav.Link>
-            <Nav.Link href="#link">BLOG</Nav.Link>
-            <Nav.Link href="#link">EN SAVOIR PLUS</Nav.Link>
+            {navigables.map((navigable) => (
+              <Nav.Link href={navigable.link}>{navigable.name}</Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
+NavBar.propTypes = {
+  navbar: PropTypes.shape({
+    homepage: PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      logo: PropTypes.string.isRequired,
+    }).isRequired,
+    navigables: PropTypes.arrayOf({
+      link: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  }).isRequired,
+};
 
 export default NavBar;

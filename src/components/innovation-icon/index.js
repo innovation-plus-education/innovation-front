@@ -7,7 +7,7 @@ function InnovationIcon({ icon, size, className }) {
     <FontAwesomeIcon
       className={className}
       icon={["fas", `${icon}`]}
-      size={size}
+      size={`${size}x`}
     />
   );
 }
@@ -18,7 +18,7 @@ InnovationIcon.defaultProps = {
 
 InnovationIcon.propTypes = {
   icon: PropTypes.string.isRequired,
-  size: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
   className: PropTypes.string,
 };
 

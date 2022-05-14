@@ -4,6 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HorizontalCardComponent from "../../components/horizontal-card";
 import cardTypes from "../../types/cardType";
+import InnovationIcon from "../../components/innovation-icon";
 
 function Motto({ items: { items, headline } }) {
   return (
@@ -14,7 +15,7 @@ function Motto({ items: { items, headline } }) {
           <Col>
             <div className="motto-header">
               <div className="motto-icon">
-                <FontAwesomeIcon icon={["fas", `${item.icon}`]} size="2x" />
+                <InnovationIcon icon={`${item.icon}`} size={2} />
               </div>
               <h5 className="subtitle">{item.title}</h5>
             </div>

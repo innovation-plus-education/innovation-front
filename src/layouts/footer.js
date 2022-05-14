@@ -3,7 +3,7 @@ import { Button, Col, Row } from "react-bootstrap";
 
 function footer({ items: { columns } }) {
   return (
-    <div className="footer">
+    <div className="footer container-fluid">
       <Row xs={1} md={3}>
         {columns.map(({ title, links }) => (
           <Col className="footer-col">

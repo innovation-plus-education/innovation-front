@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import cardTypes from "../../types/cardType";
+import getMediaUrl from "../../utils/getMediaUrl";
 
 function CardsDisplayer({ items: { items } }) {
   return (
@@ -15,7 +16,7 @@ function CardsDisplayer({ items: { items } }) {
                 <div className="card-displayer-image">
                   <img
                     className="card-displayer-image"
-                    src={item.image.data.attributes.name}
+                    src={getMediaUrl(item.image)}
                     alt={item.title}
                   />
                 </div>

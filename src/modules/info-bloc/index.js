@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import cardTypes from "../../types/cardType";
+import getMediaUrl from "../../utils/getMediaUrl";
 
 function infoBloc({ item: { item } }) {
   return (
@@ -13,7 +14,7 @@ function infoBloc({ item: { item } }) {
         <div className="info-bloc-image">
           <img
             className="info-bloc-image"
-            src={`${process.env.NEXT_PUBLIC_ASSET_URL}${item.image.data.attributes.formats.thumbnail.url}`}
+            src={getMediaUrl(item.image, true)}
             alt={item.title}
           />
         </div>
