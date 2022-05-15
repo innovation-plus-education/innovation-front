@@ -15,7 +15,7 @@ import { getLayouts } from "../src/api";
 function InnovationApp({ Component, pageProps }) {
   const queryClient = new QueryClient();
   const { navbar, footer } = dlv(pageProps.layouts, "data.attributes");
-  console.log('navbar \n', navbar)
+
   return (
     <QueryClientProvider client={queryClient}>
       <NavBar navbar={navbar} />

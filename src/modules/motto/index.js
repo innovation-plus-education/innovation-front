@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HorizontalCardComponent from "../../components/horizontal-card";
 import cardTypes from "../../types/cardType";
 import InnovationIcon from "../../components/innovation-icon";

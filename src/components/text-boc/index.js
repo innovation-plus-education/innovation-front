@@ -1,17 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-function TextBloc({ text, className }) {
-  return <p className={className}>{text}</p>;
+function TextBloc({ text, className, markdown }) {
+  return markdown ? (
+    <ReactMarkdown
+      components={{
+        h3: "h6",
+      }}
+      remarkPlugins={[remarkGfm]}
+      className={className}
+    >
+      {text}
+    </ReactMarkdown>
+  ) : (
+    <p className={className}>{text}</p>
+  );
 }
 
 TextBloc.defaultProps = {
   className: "",
+  markdown: false,
 };
 
 TextBloc.propTypes = {
   text: PropTypes.string.isRequired,
   className: PropTypes.string,
+  markdown: PropTypes.bool,
 };
 
 export default TextBloc;

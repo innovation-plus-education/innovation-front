@@ -1,0 +1,48 @@
+.eb-row {
+    margin: 1em 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 210px;
+    .eb-card {
+        flex: 1;
+        border: none;
+        padding: 0;
+        color: white;
+        font-weight: 600;
+        height: 100%;
+        .card-header {
+            background-color: $cyan-light;
+            color: $cyan-dark;
+            font-weight: bold;
+
+        }
+        .card-link {
+            font-weight: 800;
+            color: white;
+        }
+        .card-link:hover {
+            color: $cyan-light;
+            text-decoration: none;
+        }
+        
+    }
+    .eb-text-bloc {
+        flex: 3;
+        background-color: $cyan-light;
+        height: 100%;
+        max-height: 210px;
+        display: flex;
+        align-items: center;
+        @include max-screen('tablet-up') {
+            display: none;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .eb-text-bloc-paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
