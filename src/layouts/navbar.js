@@ -5,7 +5,7 @@ import getMediaUrl from "../utils/getMediaUrl";
 
 function NavBar({ navbar: { homepage, navigables } }) {
   return (
-    <Navbar bg="innovation-secondary" expand="lg" className="innovation-navbar">
+    <Navbar bg="innovation-light" expand="lg" className="innovation-navbar">
       <Container>
         <Navbar.Brand href={homepage.link}>
           <img
@@ -39,7 +39,7 @@ NavBar.propTypes = {
     navigables: PropTypes.arrayOf({
       link: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-    })
+    }),
   }).isRequired,
 };
 

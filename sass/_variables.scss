@@ -2,12 +2,15 @@
 
 $font: "Mukta", sans-serif;
 $font-vaani: 'Mukta Vaani', sans-serif;
-$font-palay: 'Play', sans-serif;
+$font-play: 'Play', sans-serif;
+$roboto: 'Roboto', sans-serif;
 $theme-colors: (
-    "innovation-light": $cyan-smooke,
+    "innovation-light": $light,
     "innovation-dark": $cyan,
-    "innovation-secondary": white,
-    "innovation-primary": $secondary
+    "innovation-secondary": $innovation-secondary,
+    "innovation-primary": $innovation-primary,
+    "innovation-purple": $innovation-purple,
+    "innovation-grey": $innovation-grey
 );
 
 $breakpoints: (

@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import getExams, { getExamsPage } from "../../src/api/exams";
 import TextBloc from "../../src/components/text-boc";
 import ExamBloc from "../../src/modules/exam-bloc";
+import getMediaUrl from "../../src/utils/getMediaUrl";
 
 // eslint-disable-next-line react/prop-types
 export default function ExamsPage({ examsPage }) {
@@ -36,18 +37,27 @@ export default function ExamsPage({ examsPage }) {
     <Container>
       <div className="ep-header">
         <h2>{title}</h2>
-        <TextBloc text={resume}/>
+        <TextBloc text={resume} />
       </div>
 
       {result.data.map(
         ({
-          attributes: { name: examName, location, date, resume: examResume },
+          attributes: {
+            name: examName,
+            location,
+            date,
+            resume: examResume,
+            id,
+            brand,
+          },
         }) => (
           <ExamBloc
+            key={id}
             examName={examName}
             location={location}
             date={moment(date).format("DD/MM/YYYY")}
             resume={examResume}
+            brand={getMediaUrl(brand, true)}
           />
         )
       )}
