@@ -1,15 +1,16 @@
 html {
     body {
         font-family: $font-vaani;
-        h1,h2,h3,h4,h5,h6 {
+        h1,h2,h3 {
             font-weight: 600;
             font-family: $roboto;
         }
         h1,h2 {
             color: $dark;
         }
-        span {
-            font-style: italic;
+        h4,h5,h6 {
+            font-weight: 500;
+            font-family: $roboto;
         }
         .app-container {
             display: flex;

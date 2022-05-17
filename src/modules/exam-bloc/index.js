@@ -1,33 +1,46 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Row } from "react-bootstrap";
-import TextBloc from "../../components/text-boc";
+import { Col, Row } from "react-bootstrap";
 
 function ExamBloc({ examName, location, date, brand }) {
   return (
-    <Row md={2} xs={1} className="eb-row">
-      <div className="eb-image">
-        <img src={brand} alt={examName} />
-      </div>
-      <Card className="eb-card">
-        <Card.Body>
-          <Card.Text as="h5">{examName}</Card.Text>
-          <Card.Text as="div">
-            <Card.Text as="span">Where:</Card.Text>
-            <Card.Text>{location}</Card.Text>
-          </Card.Text>
-          <Card.Text as="div">
-            <Card.Text as="span">When:</Card.Text>
-            <Card.Text>{date}</Card.Text>
-          </Card.Text>
-          <div className="link-btn">
-            <Card.Link href="#">Learn more</Card.Link>
-            <Card.Link href="#">Courses</Card.Link>
+    <Col className="eb-column">
+      <Row md={2} xs={1} className="eb-row">
+        <div className="eb-image">
+          <img src={brand} alt={examName} />
+        </div>
+        <div className="eb-card">
+          <div className="eb-card-row">
+            <Col md={2} xs={2}>
+              <span className="eb-label">Title:</span>
+            </Col>
+            <Col md={10} xs={10}>
+              <span className="eb-value">{examName}</span>
+            </Col>
           </div>
-        </Card.Body>
-      </Card>
-      <TextBloc />
-    </Row>
+          <div className="eb-card-row">
+            <Col md={2} xs={2}>
+              <span className="eb-label">Where:</span>
+            </Col>
+            <Col md={10} xs={10}>
+              <span className="eb-value">{location}</span>
+            </Col>
+          </div>
+          <div className="eb-card-row">
+            <Col md={2} xs={2}>
+              <span className="eb-label">When:</span>
+            </Col>
+            <Col md={10} xs={10}>
+              <span className="eb-value">{date}</span>
+            </Col>
+          </div>
+          <div className="eb-link">
+            <a href="/">Learn more</a>
+            <a href="/">Courses</a>
+          </div>
+        </div>
+      </Row>
+    </Col>
   );
 }
 

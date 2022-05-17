@@ -1,6 +1,6 @@
 import moment from "moment";
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Breadcrumb, Container, Row } from "react-bootstrap";
 import { useQuery } from "react-query";
 import getExams, { getExamsPage } from "../../src/api/exams";
 import TextBloc from "../../src/components/text-boc";
@@ -39,28 +39,29 @@ export default function ExamsPage({ examsPage }) {
         <h2>{title}</h2>
         <TextBloc text={resume} />
       </div>
-
-      {result.data.map(
-        ({
-          attributes: {
-            name: examName,
-            location,
-            date,
-            resume: examResume,
-            id,
-            brand,
-          },
-        }) => (
-          <ExamBloc
-            key={id}
-            examName={examName}
-            location={location}
-            date={moment(date).format("DD/MM/YYYY")}
-            resume={examResume}
-            brand={getMediaUrl(brand, true)}
-          />
-        )
-      )}
+      <Row md={2} xs={1}>
+        {result.data.map(
+          ({
+            attributes: {
+              name: examName,
+              location,
+              date,
+              resume: examResume,
+              id,
+              brand,
+            },
+          }) => (
+            <ExamBloc
+              key={id}
+              examName={examName}
+              location={location}
+              date={moment(date).format("DD/MM/YYYY")}
+              resume={examResume}
+              brand={getMediaUrl(brand, true)}
+            />
+          )
+        )}
+      </Row>
     </Container>
   );
 }
