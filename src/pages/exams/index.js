@@ -1,11 +1,11 @@
 import moment from "moment";
 import React from "react";
-import { Breadcrumb, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useQuery } from "react-query";
-import getExams, { getExamsPage } from "../../src/api/exams";
-import TextBloc from "../../src/components/text-boc";
-import ExamBloc from "../../src/modules/exam-bloc";
-import getMediaUrl from "../../src/utils/getMediaUrl";
+import getExams, { getExamsPage, getUpComingExams } from "@/api/exams";
+import TextBloc from "@/components/text-boc";
+import ExamBloc from "@/modules/exam-bloc";
+import getMediaUrl from "@/utils/getMediaUrl";
 
 // eslint-disable-next-line react/prop-types
 export default function ExamsPage({ examsPage }) {
@@ -15,6 +15,8 @@ export default function ExamsPage({ examsPage }) {
     data: result,
     error,
   } = useQuery("getExams", getExams);
+
+  const upcomingExams = useQuery("getUpComingExams", getUpComingExams);
 
   const {
     data: {
@@ -39,7 +41,7 @@ export default function ExamsPage({ examsPage }) {
         <h2>{title}</h2>
         <TextBloc text={resume} />
       </div>
-      <Row md={2} xs={1}>
+      <Row lg={3} md={1} xs={1}>
         {result.data.map(
           ({
             attributes: {

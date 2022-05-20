@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";
-import HorizontalCardComponent from "../../components/horizontal-card";
-import cardTypes from "../../types/cardType";
-import InnovationIcon from "../../components/innovation-icon";
+import HorizontalCardComponent from "@/components/horizontal-card";
+import cardTypes from "@/types/cardType";
+import InnovationIcon from "@/components/innovation-icon";
 
 function Motto({ items: { items, headline } }) {
   return (

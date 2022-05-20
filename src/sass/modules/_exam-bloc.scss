@@ -1,14 +1,17 @@
+.eb-column {
+    margin-top: 1em;
+}
 .eb-row {
     margin: 0.2em;
     justify-content: flex-start;
     align-items: flex-start;
     height: 150px;
-    border-left: solid $cyan;
-    border-right: solid $cyan;
+    border-left: 3px solid $cyan-light;
+    border-right: 3px solid $cyan-light;
     border-radius: 20px;
     padding: 0.5em;
     background-color: $light;
-    @include max-screen('tablet-up') {
+    @include media-breakpoint-down('md') {
         flex-direction: column;
         height: auto;
         align-items: center;
@@ -18,7 +21,7 @@
         flex: 1;
         height: 100%;
         border-right: 0.15em solid $cyan;
-        @include max-screen('tablet-up') {
+        @include media-breakpoint-down('md') {
             display: flex;
             justify-content: center;
             border: none;
@@ -35,7 +38,7 @@
         flex-grow: 4;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         .eb-card-row {
             display: flex;
             justify-content: flex-start;
@@ -49,37 +52,17 @@
         }
         .eb-link {
             display: flex;
-            justify-content: space-between;
-           a {
-            display: block;
-            width: 8em;
-            text-align: center;
-            height: 2em;
-            font-weight: 600;
-            color: #fff;
-            background-color: $cyan;
-            text-decoration: none;
-            padding: 2px 10px;
-            border-radius: 5px;
-           }
+            justify-content: space-evenly;
             a:hover {
-                color: $cyan-light;
+                color: $white;
                 text-decoration: none; 
             }
-        }       
-    }
-  
-    .eb-text-bloc {
-        flex: 3;
-        flex-grow: 5;
-        height: 100%;
-        p {
-            margin: 0;
         }
-        .eb-text-bloc-paragraph {
+        .eb-col-value {
             display: flex;
-            align-items: center;
-        }
+            justify-content: flex-start;
+            margin-left: 1em;
+        }     
     }
   
 }

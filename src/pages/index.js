@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
-import { getHomepageComponents } from "../src/api";
-import Banner from "../src/components/banner";
-import CardsDisplayer from "../src/modules/cards-displayer";
-import Motto from "../src/modules/motto";
-import InfoBloc from "../src/modules/info-bloc";
+import { getHomepageComponents } from "@/api/index";
+import Banner from "@/components/banner";
+import CardsDisplayer from "@/modules/cards-displayer";
+import Motto from "@/modules/motto";
+import InfoBloc from "@/modules/info-bloc";
 
 // eslint-disable-next-line react/prop-types
 export default function HomePage({ homepageComponents }) {

@@ -1,23 +1,15 @@
 @import './colors';
-
 $font: "Mukta", sans-serif;
 $font-vaani: 'Mukta Vaani', sans-serif;
 $font-play: 'Play', sans-serif;
 $roboto: 'Roboto', sans-serif;
 $theme-colors: (
     "innovation-light": $light,
-    "innovation-dark": $cyan,
+    "innovation-dark": $cyan-dark,
     "innovation-secondary": $innovation-secondary,
-    "innovation-primary": $innovation-primary,
+    "innovation-primary": $cyan,
     "innovation-purple": $innovation-purple,
     "innovation-grey": $innovation-grey
 );
 
-$breakpoints: (
-    "phone-down": 500px,
-    "tablet-up": 768px,
-    "tablet-down": 900px,
-    "desktop-up": 1024px,
-    "desktop-down": 1280px,
-    "widescreen-up": 1440px
-);
+@import '~bootstrap/scss/bootstrap';

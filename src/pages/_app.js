@@ -5,12 +5,11 @@ import App from "next/app";
 import dlv from "dlv";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import "../styles/globals.css";
-import "../sass/_app.scss";
-import NavBar from "../src/layouts/navbar";
-import Footer from "../src/layouts/footer";
-import "../src/lib/fontawesome";
-import { getLayouts } from "../src/api";
+import "@/sass/_app.scss";
+import NavBar from "@/layouts/navbar";
+import Footer from "@/layouts/footer";
+import "@/lib/fontawesome";
+import { getLayouts } from "../api";
 
 function InnovationApp({ Component, pageProps }) {
   const queryClient = new QueryClient();

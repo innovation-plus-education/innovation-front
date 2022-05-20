@@ -1,31 +1,50 @@
 {
-  "env": {
-      "browser": true,
-      "es2021": true
-  },
-  "extends": [
-      "airbnb",
-      "plugin:prettier/recommended"
-  ],
-  "parserOptions": {
-      "ecmaFeatures": {
-          "jsx": true
-      },
-      "ecmaVersion": 12,
-      "sourceType": "module"
-  },
-  "plugins": [
-      "react"
-  ],
-  "rules": {
-      "react/jsx-filename-extension": [
-          1,
-          {
-              "extensions": [
-                  ".js",
-                  ".jsx"
-              ]
-          }
-      ]
-  }
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "import/resolver": {
+            "alias": {
+                "map": [
+                    ["@/lib", "./src/lib"],
+                    ["@/components", "./src/components"],
+                    ["@/utils", "./src/utils"],
+                    ["@/api", "./src/api"],
+                    ["@/modules", "./src/modules"],
+                    ["@/layouts", "./src/layouts"],
+                    ["@/types", "./src/types"],
+                    ["@/sass", "./src/sass"]
+                ]
+            },
+            "node": {
+                "extensions": [".ts", ".js", ".jsx", ".json"]
+            }
+        }
+    },
+    "rules": {
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ]
+    }
 }

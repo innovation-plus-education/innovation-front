@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import cardTypes from "../../types/cardType";
-import getMediaUrl from "../../utils/getMediaUrl";
+import cardTypes from "@/types/cardType";
+import getMediaUrl from "@/utils/getMediaUrl";
 
 function infoBloc({ item: { item } }) {
   return (

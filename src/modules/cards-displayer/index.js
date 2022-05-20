@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import cardTypes from "../../types/cardType";
-import getMediaUrl from "../../utils/getMediaUrl";
+import cardTypes from "@/types/cardType";
+import getMediaUrl from "@/utils/getMediaUrl";
 
 function CardsDisplayer({ items: { items } }) {
   return (
