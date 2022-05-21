@@ -1,23 +1,25 @@
-import moment from "moment";
 import React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import getExams, { getExamsPage, getUpComingExams } from "@/api/exams";
 import TextBloc from "@/components/text-boc";
 import ExamBloc from "@/modules/exam-bloc";
-import getMediaUrl from "@/utils/getMediaUrl";
+import dlv from "dlv";
 
 // eslint-disable-next-line react/prop-types
 export default function ExamsPage({ examsPage }) {
   const {
     isLoading,
     isError,
-    data: result,
+    data: examData,
     error,
   } = useQuery("getExams", getExams);
-
-  const upcomingExams = useQuery("getUpComingExams", getUpComingExams);
-
+  const exams = dlv(examData, "data");
+  const { data: upCommingExamData } = useQuery(
+    "getUpComingExams",
+    getUpComingExams
+  );
+  const upComingExams = dlv(upCommingExamData, "data");
   const {
     data: {
       data: {
@@ -41,29 +43,9 @@ export default function ExamsPage({ examsPage }) {
         <h2>{title}</h2>
         <TextBloc text={resume} />
       </div>
-      <Row lg={3} md={1} xs={1}>
-        {result.data.map(
-          ({
-            attributes: {
-              name: examName,
-              location,
-              date,
-              resume: examResume,
-              id,
-              brand,
-            },
-          }) => (
-            <ExamBloc
-              key={id}
-              examName={examName}
-              location={location}
-              date={moment(date).format("DD/MM/YYYY")}
-              resume={examResume}
-              brand={getMediaUrl(brand, true)}
-            />
-          )
-        )}
-      </Row>
+      {exams && upComingExams && (
+        <ExamBloc exams={exams} upComingExams={upComingExams} />
+      )}
     </Container>
   );
 }

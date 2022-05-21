@@ -5,13 +5,7 @@ import remarkGfm from "remark-gfm";
 
 function TextBloc({ text, className, markdown }) {
   return markdown ? (
-    <ReactMarkdown
-      components={{
-        h3: "h6",
-      }}
-      remarkPlugins={[remarkGfm]}
-      className={className}
-    >
+    <ReactMarkdown remarkPlugins={[remarkGfm]} className={className}>
       {text}
     </ReactMarkdown>
   ) : (

@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { getHomepageComponents } from "@/api/index";
 import Banner from "@/components/banner";
-import CardsDisplayer from "@/modules/cards-displayer";
+import NavigationBloc from "@/modules/navigation-bloc";
 import Motto from "@/modules/motto";
 import InfoBloc from "@/modules/info-bloc";
 
@@ -28,7 +28,7 @@ export default function HomePage({ homepageComponents }) {
       <Container>
         <InfoBloc item={infoBloc} />
         <Motto items={mottos} />
-        <CardsDisplayer items={categories} />
+        <NavigationBloc items={categories} />
       </Container>
     </>
   );

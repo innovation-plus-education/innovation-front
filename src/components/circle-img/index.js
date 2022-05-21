@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Image } from "react-bootstrap";
 
 function CircleImg({ src, alt, className }) {
-  return (
-    <div className={`rounded-img ${className}`}>
-      <img src={src} alt={alt} />
-    </div>
-  );
+  return <Image src={src} alt={alt} roundedCircle className={className} />;
 }
 
 CircleImg.defaultProps = {

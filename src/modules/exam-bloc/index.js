@@ -1,44 +1,42 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Button, Col, Row } from "react-bootstrap";
-import TextRawColumns from "@/components/text-row-columns";
-import CircleImg from "@/components/circle-img";
+import { Row } from "react-bootstrap";
+import examsType from "@/types/examsType";
+import moment from "moment";
+import ExamComponent from "./component";
 
-function ExamBloc({ examName, location, date, brand }) {
+function ExamBloc({ exams, upComingExams }) {
   return (
-    <Col className="eb-column">
-      <Row lg={2} md={2} xs={1} className="eb-row">
-        <CircleImg className="eb-image" src={brand} alt={examName} />
-        <div className="eb-card">
-          <TextRawColumns
-            className="eb-card-row"
-            value={examName}
-            label="Title"
-          />
-          <TextRawColumns
-            className="eb-card-row"
-            value={location}
-            label="where"
-          />
-          <TextRawColumns className="eb-card-row" value={date} label="when" />
-          <div className="eb-link">
-            <Button href="/" variant="outline-innovation-primary" size="sm">
-              Learn more
-            </Button>
-            <Button href="/" variant="outline-innovation-primary" size="sm">
-              Courses
-            </Button>
-          </div>
-        </div>
+    <div>
+      <Row lg={4} md={3} xs={1}>
+        {upComingExams.map(
+          ({ attributes: { name, location, date, brand } }) => (
+            <ExamComponent
+              name={name}
+              location={location}
+              date={moment(date).format("DD/MM/YYYY")}
+              brand={brand}
+              className="upcoming-exam"
+            />
+          )
+        )}
       </Row>
-    </Col>
+      <Row lg={2} md={1} xs={1} className="ep-row">
+        {exams.map(({ attributes: { name, location, date, brand } }) => (
+          <ExamComponent
+            name={name}
+            location={location}
+            date={moment(date).format("DD/MM/YYYY")}
+            brand={brand}
+            className="eb-row"
+          />
+        ))}
+      </Row>
+    </div>
   );
 }
 
 ExamBloc.propTypes = {
-  examName: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  brand: PropTypes.string.isRequired,
+  exams: examsType.isRequired,
+  upComingExams: examsType.isRequired,
 };
 export default ExamBloc;

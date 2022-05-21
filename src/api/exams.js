@@ -24,6 +24,7 @@ export const getUpComingExams = async () => {
         $gte: moment.now().toString(),
       },
     },
+    populate: ["brand"],
     sort: ["date:desc"],
     pagination: {
       limit: 3,

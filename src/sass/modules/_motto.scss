@@ -1,9 +1,9 @@
-.innovation-motto-col {
+.motto-col {
     margin: 2em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    #innovation-motto-row {
+    #motto-row {
         justify-content: space-between;
         h2 {
             text-align: center;
@@ -11,18 +11,31 @@
         .col {
             align-items: center;
             justify-content: center;
+            margin-bottom: 1em;
         }
         .motto-header {
             display: flex;
             justify-content: start;
             align-items: center;
-            .motto-icon {
-                margin-right: 0.5em;
-                border-radius: 50%;
-                background-color: $cyan-smooke;
-                padding: 1em;
-                color: $cyan;
+            font-weight: 600;
+            margin-bottom: 1em;
+            h4 {
+                margin: 0;
+                font-weight: inherit;
             }
+            .motto-icon {
+                margin-right: 0.2em;
+            }
+        }
+        .motto-card {
+            background-color: $cyan-light;
+            border-radius: 1em;
+            padding: 1em;
+            color: $cyan-dark;
+            display: flex;
+            flex-direction: column;
+            background-clip: border-box;
+            box-shadow: 1px 1px 1px $cyan-dark;
         }
     }
 }

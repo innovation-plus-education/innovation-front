@@ -1,28 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";
-import HorizontalCardComponent from "@/components/horizontal-card";
 import cardTypes from "@/types/cardType";
 import InnovationIcon from "@/components/innovation-icon";
+import TextBloc from "@/components/text-boc";
 
 function Motto({ items: { items, headline } }) {
   return (
-    <div className="innovation-motto-col">
-      <h2>{headline}</h2>
-      <Row md="3" xs="1" id="innovation-motto-row">
+    <div className="motto-col">
+      <h3>{headline}</h3>
+      <Row md="3" xs="1" id="motto-row">
         {items.map((item) => (
           <Col>
-            <div className="motto-header">
-              <div className="motto-icon">
-                <InnovationIcon icon={`${item.icon}`} size={2} />
+            <div className="motto-card">
+              <div className="motto-header">
+                <InnovationIcon
+                  icon={`${item.icon}`}
+                  className="motto-icon"
+                  size={2}
+                />
+                <h4 className="subtitle">{item.title}</h4>
               </div>
-              <h5 className="subtitle">{item.title}</h5>
+              <TextBloc text={item.description} />
             </div>
-            <HorizontalCardComponent
-              description={item.description}
-              link={item.link}
-              icon={item.icon}
-            />
           </Col>
         ))}
       </Row>
