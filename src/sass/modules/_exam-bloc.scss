@@ -1,3 +1,6 @@
+/*
+ share between all component in exam-bloc module
+*/
 .eb-column {
     margin-top: 1em;
 }
@@ -64,12 +67,86 @@
     }     
 }
 
-.upcoming-exam {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
-    .eb-card {
+// upcoming exam section
+.eb-upcoming-exams-raw {
+    .col-md-auto {
+        height: 100%;
         width: 100%;
+    }
+  .eb-upcoming-exams-card {
+    box-shadow: 1px 1px 3px $gray-400;
+    border-radius: 1.25rem;
+    background-color: $light;
+    height: 100%;
+    width: 100%;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    h5 {
+        font-weight: 500;
+        color: $cyan-dark;
+    }
+    .text-raw-col {
+        height: 100%;
+        width: 100%;
+    }
+    .text-raw-label-col {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        svg {
+            color: $cyan-dark;
+        }
+        .text-raw-label {
+            font-weight: 400;
+        }
+    }
+    .text-raw-value-col {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .eb-link {
+        margin-top: 1em;
+    }
+    
+  }
+}
+
+// exam-mobile-component section
+.em-carousel {
+    .carousel-dark {
+        color: $cyan-dark;
+    }
+    .carousel-inner .active {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $cyan-200;
         padding: 1em;
+        border-radius: 2px;
+        .carousel-caption {
+            position: relative;
+            color: unset;
+            right: unset;
+            left: unset;
+            width: 100%;
+            padding: 1em;
+            margin-top: 1em;
+        }
+    }
+
+}
+.card {
+    .card-img-top {
+        height: 200px;
+    }
+    .card-text {
+        .text-raw-col {
+            display: flex;
+        }
     }
 }

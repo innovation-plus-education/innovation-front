@@ -28,7 +28,8 @@
                     ["@/modules", "./src/modules"],
                     ["@/layouts", "./src/layouts"],
                     ["@/types", "./src/types"],
-                    ["@/sass", "./src/sass"]
+                    ["@/sass", "./src/sass"],
+                    ["@/hooks/*", "./src/hooks"]
                 ]
             },
             "node": {

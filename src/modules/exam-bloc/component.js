@@ -8,8 +8,8 @@ import { examType } from "@/types/examsType";
 
 function ExamComponent({ name, location, date, brand, className }) {
   return (
-    <Col className="eb-column">
-      <Row lg={2} md={2} xs={1} className={className}>
+    <Col className={`eb-column ${className}`}>
+      <Row lg={2} md={2} xs={1} className="eb-row">
         <CircleImg
           className="eb-image"
           src={getMediaUrl(brand, true)}

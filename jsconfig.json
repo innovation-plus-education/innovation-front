@@ -9,7 +9,8 @@
           "@/lib/*": ["src/lib/*"],
           "@/types/*": ["src/types/*"],
           "@/api/*": ["src/api/*"],
-          "@/sass/*": ["src/sass/*"]
+          "@/sass/*": ["src/sass/*"],
+          "@/hooks/*": ["src/hooks/*"]
         }
       }
 }
