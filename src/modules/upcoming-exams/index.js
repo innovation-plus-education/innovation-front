@@ -3,8 +3,8 @@ import { Row } from "react-bootstrap";
 import examsType from "@/types/examsType";
 import moment from "moment";
 import useMediaSize from "@/hooks/useMediaSize";
-import ExamComponent from "@/components/business/exam";
-import ExamMobileComponent from "@/components/business/exam-mobile";
+import ExamComponent from "../exam-bloc/component";
+import ExamMobileComponent from "../exam-bloc/mobile-component";
 
 function ExamBloc({ exams, upComingExams }) {
   const isDesktop = useMediaSize();

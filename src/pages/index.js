@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { getHomepageComponents } from "@/api/index";
-import Banner from "@/components/banner";
+import Banner from "@/components/commons/banner";
 import NavigationBloc from "@/modules/navigation-bloc";
 import Motto from "@/modules/motto";
 import InfoBloc from "@/modules/info-bloc";

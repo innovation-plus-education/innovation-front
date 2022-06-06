@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";
 import cardTypes from "@/types/cardType";
-import InnovationIcon from "@/components/innovation-icon";
-import TextBloc from "@/components/text-boc";
+import InnovationIcon from "@/components/commons/innovation-icon";
+import TextBloc from "@/components/commons/text-boc";
 
 function Motto({ items: { items, headline } }) {
   return (

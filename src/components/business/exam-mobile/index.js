@@ -1,8 +1,7 @@
-import CircleImg from "@/components/circle-img";
-import TextRawColumns from "@/components/text-row-columns";
+import CircleImg from "@/components/commons/circle-img";
+import TextRawColumns from "@/components/commons/text-row-columns";
 import examsType from "@/types/examsType";
 import getMediaUrl from "@/utils/getMediaUrl";
-import moment from "moment";
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
 

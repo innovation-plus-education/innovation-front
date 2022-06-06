@@ -3,7 +3,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
-import getMediaUrl from "../../utils/getMediaUrl";
+import getMediaUrl from "@/utils/getMediaUrl";
 
 function Banner({ description, title, image }) {
   return (

@@ -1,71 +1,75 @@
 /*
  share between all component in exam-bloc module
 */
-.eb-column {
-    margin-top: 1em;
-}
-.eb-row {
-    margin: 0.2em;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 150px;
-    box-shadow: 1px 1px 1px $cyan-dark;
-    border-radius: 20px;
-    padding: 0.5em;
-    background-color: $white;
-    @include media-breakpoint-down('md') {
-        flex-direction: column;
-        height: auto;
-        align-items: center;
-        border: none;
-    }
-}
-.eb-image {
-    flex: 1;
-    height: 100%;
-    @include media-breakpoint-down('md') {
-        display: flex;
-        justify-content: center;
-        border: none;
-        margin-bottom: 1em;
-    }
-    img {
-        height: inherit;
-        border-radius: 50%;
-    }
-}
-.eb-card {
-    height: 100%;
-    flex: 1;
-    flex-grow: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    .eb-card-row {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .eb-label {
-        font-weight: 600;
-    }
-    .link-btn {
-        display: flex;
-        align-items: center;
-    }
-    .eb-link {
-        display: flex;
-        justify-content: space-evenly;
-        a:hover {
-            color: $white;
-            text-decoration: none; 
+
+// general
+.ep-raw {
+    .exam-col-component {
+        margin: 1em 0;
+        .exams-card {
+            box-shadow: 10px 5px 5px $gray-400;
+            border-radius: 1.25rem;
+            height: 100%;
+            width: 100%;
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 200px;
+            }
+            .text-raw-label-col {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                // svg {
+                //     color: $cyan-dark;
+                // }
+                .text-raw-label {
+                    // font-weight: 400;
+                    margin-left: 0.3em;
+                }
+            }
+            .text-raw-value-col {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding: 0;
+            }
+            .eb-link {
+                display: flex;
+                justify-content: flex-end;
+            }
         }
     }
-    .eb-col-value {
-        display: flex;
-        justify-content: flex-start;
-    }     
 }
+
+// Bloc Section
+.eb-raw {
+    border-top: 1px solid $gray-100;
+}
+
+// upcoming bloc section
+.eb-upcoming-exams-raw {
+    .exams-card {
+        background-color: $yellow-100;
+        .btn {
+            border-color: $black;
+            color: $black; 
+        }
+        .btn:hover {
+            background-color: $white;
+            border-color: $white;
+        }
+        .btn:focus {
+            box-shadow: none;
+        }
+        // color: white;
+        // svg {
+        //     color: white;
+        // }
+    }
+}
+// exam bloc section
 
 // upcoming exam section
 .eb-upcoming-exams-raw {
@@ -74,16 +78,8 @@
         width: 100%;
     }
   .eb-upcoming-exams-card {
-    box-shadow: 1px 1px 3px $gray-400;
-    border-radius: 1.25rem;
     background-color: $light;
-    height: 100%;
-    width: 100%;
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+  
     h5 {
         font-weight: 500;
         color: $cyan-dark;

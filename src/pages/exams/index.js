@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import getExams, { getExamsPage, getUpComingExams } from "@/api/exams";
-import TextBloc from "@/components/text-boc";
+import TextBloc from "@/components/commons/text-boc";
 import ExamBloc from "@/modules/exam-bloc";
 import dlv from "dlv";
 

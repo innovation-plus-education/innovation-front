@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import cardTypes from "@/types/cardType";
 import getMediaUrl from "@/utils/getMediaUrl";
-import CircleImg from "@/components/circle-img";
-import TextBloc from "@/components/text-boc";
+import CircleImg from "@/components/commons/circle-img";
+import TextBloc from "@/components/commons/text-boc";
 
 function NavigationBloc({ items: { items, title } }) {
   return (

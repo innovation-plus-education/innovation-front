@@ -6,7 +6,7 @@ import InnovationIcon from "../innovation-icon";
 function TextRawColumns({ label, value, className, icon }) {
   return (
     <Row className={`text-raw-col equal ${className}`}>
-      <Col md={5} xs={6} className="text-raw-label-col">
+      <Col md={4} xs={4} className="text-raw-label-col">
         {icon && (
           <div className="text-raw-icon">
             <InnovationIcon icon={icon} type="far" />
@@ -14,7 +14,7 @@ function TextRawColumns({ label, value, className, icon }) {
         )}
         <span className="text-raw-label">{label}:</span>
       </Col>
-      <Col md={7} xs={6} className="text-raw-value-col">
+      <Col md={8} xs={8} className="text-raw-value-col">
         <span className="text-raw-value">{value}</span>
       </Col>
     </Row>

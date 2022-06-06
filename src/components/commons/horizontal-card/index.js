@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card } from "react-bootstrap";
-import cardTypes from "../../types/cardType";
+import cardTypes from "@/types/cardType";
 
 function HorizontalCardComponent({ description, className }) {
   return (
