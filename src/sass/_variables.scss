@@ -4,13 +4,17 @@ $font-vaani: 'Mukta Vaani', sans-serif;
 $font-play: 'Play', sans-serif;
 $roboto: 'Roboto Flex', sans-serif;
 $mulish: 'Mulish', sans-serif;
+
 $theme-colors: (
-    "innovation-light": $light,
-    "innovation-dark": $cyan-dark,
-    "innovation-secondary": $innovation-secondary,
-    "innovation-primary": $cyan,
-    "innovation-purple": $innovation-purple,
-    "innovation-grey": $innovation-grey
+    "innovation-light": $white,
+    "innovation-dark": $innvation-dark,
+    "innovation-secondary": $gray,
+    "innovation-primary": $blue,
+    "innovation-danger": $red,
+    "innovation-warning": $orange,
+    "innovation-success": $green,
+    "innovation-info": $teal,
 );
 
 @import '~bootstrap/scss/bootstrap';
+

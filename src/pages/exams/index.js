@@ -5,6 +5,7 @@ import getExams, { getExamsPage, getUpComingExams } from "@/api/exams";
 import TextBloc from "@/components/commons/text-boc";
 import ExamBloc from "@/modules/exam-bloc";
 import dlv from "dlv";
+import UpCommingExams from "@/modules/upcoming-exams";
 
 // eslint-disable-next-line react/prop-types
 export default function ExamsPage({ examsPage }) {
@@ -39,13 +40,20 @@ export default function ExamsPage({ examsPage }) {
   }
   return (
     <Container>
-      <div className="ep-header">
-        <h2>{title}</h2>
-        <TextBloc text={resume} />
+      <div className="upcoming-exams-bloc">
+        <div className="ep-header">
+          <h2>{title}</h2>
+          <TextBloc text={resume} />
+        </div>
+        {upComingExams && <UpCommingExams upComingExams={upComingExams} />}
       </div>
-      {exams && upComingExams && (
-        <ExamBloc exams={exams} upComingExams={upComingExams} />
-      )}
+      <div className="exams-bloc">
+        <div className="ep-header">
+          <h2>{title}</h2>
+          <TextBloc text={resume} />
+        </div>
+        {exams && <ExamBloc exams={exams} />}
+      </div>
     </Container>
   );
 }

@@ -1,17 +1,8 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
 
-function footer(props) {
-  console.log(props);
+function footer() {
   return (
-    <section
-      style={{
-        "background-color": "#07a8a0",
-        color: "white !important",
-        marginTop: "2em",
-        fontWeight: "600",
-      }}
-    >
+    <section className="innovation-footer">
       <footer className="text-center text-white">
         <div className="container p-4 pb-0">
           <section className="">

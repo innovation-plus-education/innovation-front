@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";
 import cardTypes from "@/types/cardType";
-import InnovationIcon from "@/components/commons/innovation-icon";
 import TextBloc from "@/components/commons/text-boc";
 
 function Motto({ items: { items, headline } }) {
@@ -14,11 +13,6 @@ function Motto({ items: { items, headline } }) {
           <Col>
             <div className="motto-card">
               <div className="motto-header">
-                <InnovationIcon
-                  icon={`${item.icon}`}
-                  className="motto-icon"
-                  size={2}
-                />
                 <h4 className="subtitle">{item.title}</h4>
               </div>
               <TextBloc text={item.description} />

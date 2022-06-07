@@ -3,49 +3,39 @@ import { Row } from "react-bootstrap";
 import examsType from "@/types/examsType";
 import moment from "moment";
 import useMediaSize from "@/hooks/useMediaSize";
-import ExamComponent from "../exam-bloc/component";
-import ExamMobileComponent from "../exam-bloc/mobile-component";
+import ExamComponent from "@/components/business/exam";
+import ExamMobileComponent from "@/components/business/exam-mobile";
 
-function ExamBloc({ exams, upComingExams }) {
+function UpCommingExams({ upComingExams }) {
   const isDesktop = useMediaSize();
-  const centerBloc = exams.length < 4 ? "justify-content-md-center" : "";
+  const centerBloc =
+    upComingExams.length < 4 ? "justify-content-md-center" : "";
   return (
-    <div>
-      <Row
-        lg={4}
-        md={2}
-        xs={1}
-        className={`eb-upcoming-exams-raw equal ${centerBloc} ep-raw`}
-      >
-        {isDesktop ? (
-          upComingExams.map(({ attributes: { name, location, date } }) => (
-            <ExamComponent
-              name={name}
-              location={location}
-              date={moment(date).format("DD/MM/YYYY")}
-              className="upcoming-exams"
-            />
-          ))
-        ) : (
-          <ExamMobileComponent exams={upComingExams} />
-        )}
-      </Row>
-      <Row lg={4} md={2} xs={1} className={`eb-raw equal ${centerBloc} ep-raw`}>
-        {exams.map(({ attributes: { name, location, date } }) => (
+    <Row
+      lg={4}
+      md={2}
+      xs={1}
+      className={`upcoming-exams-raw equal ${centerBloc} ep-raw`}
+    >
+      {isDesktop ? (
+        upComingExams.map(({ attributes: { name, location, date }, id }) => (
           <ExamComponent
             name={name}
             location={location}
             date={moment(date).format("DD/MM/YYYY")}
-            className="eb-exams"
+            className="upcoming-exams"
+            id={id}
+            key={id}
           />
-        ))}
-      </Row>
-    </div>
+        ))
+      ) : (
+        <ExamMobileComponent exams={upComingExams} />
+      )}
+    </Row>
   );
 }
 
-ExamBloc.propTypes = {
-  exams: examsType.isRequired,
+UpCommingExams.propTypes = {
   upComingExams: examsType.isRequired,
 };
-export default ExamBloc;
+export default UpCommingExams;

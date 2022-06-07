@@ -2,50 +2,27 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import examsType from "@/types/examsType";
 import moment from "moment";
-import useMediaSize from "@/hooks/useMediaSize";
 import ExamComponent from "@/components/business/exam";
-import ExamMobileComponent from "@/components/business/exam-mobile";
 
-function ExamBloc({ exams, upComingExams }) {
-  const isDesktop = useMediaSize();
+function ExamBloc({ exams }) {
   const centerBloc = exams.length < 4 ? "justify-content-md-center" : "";
   return (
-    <div>
-      <Row
-        lg={4}
-        md={2}
-        xs={1}
-        className={`eb-upcoming-exams-raw equal ${centerBloc} ep-raw`}
-      >
-        {isDesktop ? (
-          upComingExams.map(({ attributes: { name, location, date } }) => (
-            <ExamComponent
-              name={name}
-              location={location}
-              date={moment(date).format("DD/MM/YYYY")}
-              className="upcoming-exams"
-            />
-          ))
-        ) : (
-          <ExamMobileComponent exams={upComingExams} />
-        )}
-      </Row>
-      <Row lg={4} md={2} xs={1} className={`eb-raw equal ${centerBloc} ep-raw`}>
-        {exams.map(({ attributes: { name, location, date } }) => (
-          <ExamComponent
-            name={name}
-            location={location}
-            date={moment(date).format("DD/MM/YYYY")}
-            className="eb-exams"
-          />
-        ))}
-      </Row>
-    </div>
+    <Row lg={4} md={2} xs={1} className={`eb-raw equal ${centerBloc} ep-raw`}>
+      {exams.map(({ attributes: { name, location, date }, id }) => (
+        <ExamComponent
+          name={name}
+          location={location}
+          date={moment(date).format("DD/MM/YYYY")}
+          className="eb-exams"
+          id={id}
+          key={id}
+        />
+      ))}
+    </Row>
   );
 }
 
 ExamBloc.propTypes = {
   exams: examsType.isRequired,
-  upComingExams: examsType.isRequired,
 };
 export default ExamBloc;

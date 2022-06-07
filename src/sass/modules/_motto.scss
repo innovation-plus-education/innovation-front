@@ -14,28 +14,22 @@
             margin-bottom: 1em;
         }
         .motto-header {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            font-weight: 600;
             margin-bottom: 1em;
             h4 {
                 margin: 0;
+                text-align: center;
                 font-weight: inherit;
-            }
-            .motto-icon {
-                margin-right: 0.2em;
             }
         }
         .motto-card {
-            background-color: $cyan-light;
+            background-color: $cyan-700;
             border-radius: 1em;
             padding: 1em;
-            color: $cyan-dark;
+            color: $white;
             display: flex;
             flex-direction: column;
             background-clip: border-box;
-            box-shadow: 1px 1px 1px $cyan-dark;
+            box-shadow: 2px 2px 5px $gray-400;
         }
     }
 }

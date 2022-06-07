@@ -1,0 +1,30 @@
+.exams-card {
+    box-shadow: 10px 5px 5px $gray-400;
+    border-radius: 1.25rem;
+    height: 100%;
+    width: 100%;
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+    }
+    .text-raw-label-col {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .text-raw-label {
+            margin-left: 0.3em;
+        }
+    }
+    .text-raw-value-col {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0;
+    }
+    .eb-link {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

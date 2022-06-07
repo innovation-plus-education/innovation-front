@@ -5,7 +5,7 @@ import TextRawColumns from "@/components/commons/text-row-columns";
 import { examType } from "@/types/examsType";
 import moment from "moment";
 
-function ExamComponent({ name, location, date, className }) {
+function ExamComponent({ name, location, date, className, id }) {
   return (
     <Col className={`exam-col-component ${className}`}>
       <Card className="exams-card">
@@ -22,7 +22,11 @@ function ExamComponent({ name, location, date, className }) {
             />
           </Card.Text>
           <div className="eb-link">
-            <Button variant="outline-innovation-primary" size="sm" href="/">
+            <Button
+              variant="outline-innovation-dark"
+              size="sm"
+              href={`/exam/${id}`}
+            >
               Voir plus
             </Button>
           </div>
