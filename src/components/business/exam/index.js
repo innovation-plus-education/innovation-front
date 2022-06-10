@@ -25,7 +25,7 @@ function ExamComponent({ name, location, date, className, id }) {
             <Button
               variant="outline-innovation-dark"
               size="sm"
-              href={`/exam/${id}`}
+              href={`/exams/${id}`}
             >
               Voir plus
             </Button>

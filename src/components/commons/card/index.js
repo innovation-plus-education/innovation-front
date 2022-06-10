@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import cardTypes from "../../types/cardType";
+import cardTypes from "@/types/cardType";
 
 function CardComponent({ title, description, link, imageUrl }) {
   return (
