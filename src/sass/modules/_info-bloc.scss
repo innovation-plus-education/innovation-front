@@ -1,0 +1,22 @@
+.info-bloc-container {
+    background-color: $cyan-700;
+    padding: 0;
+    margin: 1em 0;
+    .info-bloc-row {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        color: white;
+        .d-f-c {
+            flex: 2;
+            align-items: center;
+            .info-bloc-paragraph {
+                padding: 0 2em;
+            }
+        }
+        .info-bloc-image {
+            width: auto;
+        }
+    }
+}

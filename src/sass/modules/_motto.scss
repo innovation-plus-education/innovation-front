@@ -1,0 +1,35 @@
+.motto-col {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #motto-row {
+        justify-content: space-between;
+        h2 {
+            text-align: center;
+        }
+        .col {
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+        .motto-header {
+            margin-bottom: 1em;
+            h4 {
+                margin: 0;
+                text-align: center;
+                font-weight: inherit;
+            }
+        }
+        .motto-card {
+            background-color: $cyan-700;
+            border-radius: 1em;
+            padding: 1em;
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            background-clip: border-box;
+            box-shadow: 2px 2px 5px $gray-400;
+        }
+    }
+}

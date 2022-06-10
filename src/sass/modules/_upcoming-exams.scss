@@ -1,0 +1,18 @@
+.upcoming-exams-raw {
+    .exams-card {
+        color: $white;
+        background-color: $cyan-700;
+        .btn {
+            border-color: $white;
+            color: $white; 
+        }
+        .btn:hover {
+            background-color: $white;
+            border-color: $white;
+            color: $cyan-700;
+        }
+        .btn:focus {
+            box-shadow: none;
+        }
+    }
+}

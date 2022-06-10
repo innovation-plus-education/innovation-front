@@ -1,0 +1,44 @@
+.nb-container {
+    h3 {
+        text-align: center;
+    }
+    .nb-row {
+        .nb-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .nb-image {
+               img {
+                border-radius: 50%;
+               } 
+               display: flex;
+               justify-content: center;
+            }
+          
+            .nb-text-bloc {
+                margin: 1em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h4 {
+                    text-align: center;
+                    color: $cyan-700;
+                    font-weight: 800;
+                    margin: 0;
+                }
+                .btn {
+                    color: white;
+                    font-weight: 600;
+                }
+                .nb-paragraph {
+                    color: $gray-500;
+                    max-height: 4em;
+                    overflow-y: hidden;
+                    text-align: center;
+                }
+            }
+           
+        }
+    }
+}

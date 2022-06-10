@@ -1,24 +1,35 @@
 import React from "react";
-import { Button, Col, Row } from "react-bootstrap";
 
-function footer({ items: { columns } }) {
+function footer() {
   return (
-    <div className="footer">
-      <Row xs={1} md={3}>
-        {columns.map(({ title, links }) => (
-          <Col className="footer-col">
-            <h4>{title}</h4>
-            {links.map(({ href, title: btnTitle }) => (
-              <div>
-                <Button as="a" href={href} size="lg">
-                  {btnTitle}
-                </Button>
-              </div>
-            ))}
-          </Col>
-        ))}
-      </Row>
-    </div>
+    <section className="innovation-footer">
+      <footer className="text-center text-white">
+        <div className="container p-4 pb-0">
+          <section className="">
+            <p className="d-flex justify-content-center align-items-center">
+              <span className="me-3">Register for free</span>
+              <button
+                type="button"
+                className="btn btn-outline-innovation-light btn-rounded"
+              >
+                Contact Us
+              </button>
+            </p>
+          </section>
+        </div>
+
+        <div className="text-center p-3">
+          © 2020 Copyright:
+          <a
+            className="text-white"
+            href="https://mdbootstrap.com/"
+            style={{ textDecoration: "none", marginLeft: "1em" }}
+          >
+            Willy NOUBISSIE
+          </a>
+        </div>
+      </footer>
+    </section>
   );
 }
 

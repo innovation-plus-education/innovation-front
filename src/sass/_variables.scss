@@ -1,0 +1,20 @@
+@import './colors';
+$font: "Mukta", sans-serif;
+$font-vaani: 'Mukta Vaani', sans-serif;
+$font-play: 'Play', sans-serif;
+$roboto: 'Roboto Flex', sans-serif;
+$mulish: 'Mulish', sans-serif;
+
+$theme-colors: (
+    "innovation-light": $white,
+    "innovation-dark": $innvation-dark,
+    "innovation-secondary": $gray,
+    "innovation-primary": $blue,
+    "innovation-danger": $red,
+    "innovation-warning": $orange,
+    "innovation-success": $green,
+    "innovation-info": $teal,
+);
+
+@import '~bootstrap/scss/bootstrap';
+
