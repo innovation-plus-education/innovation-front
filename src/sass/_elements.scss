@@ -25,5 +25,13 @@ html {
             display: flex;
             flex-direction: column;
         }
+        .title-light {
+            width: 300px;
+            text-align: center;
+            padding: 0.2em;
+            color: $cyan-700;
+            background-color: $light;
+            border-radius: 10px;
+        }
     }
 }

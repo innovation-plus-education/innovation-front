@@ -5,11 +5,17 @@ import cardTypes from "@/types/cardType";
 import getMediaUrl from "@/utils/getMediaUrl";
 import CircleImg from "@/components/commons/circle-img";
 import TextBloc from "@/components/commons/text-boc";
+import Title from "@/components/commons/title";
 
-function NavigationBloc({ items: { items, title } }) {
+function NavigationBloc({ items: { items, title, titleBackground } }) {
   return (
     <Container className="nb-container">
-      <h3>{title}</h3>
+      <Title
+        backgroundImage={getMediaUrl(titleBackground)}
+        className="title-light"
+      >
+        <h3>{title}</h3>
+      </Title>
       <Row xs={1} md={4} className="nb-row">
         {items &&
           items.map((item) => (

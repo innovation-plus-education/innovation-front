@@ -3,11 +3,18 @@ import PropTypes from "prop-types";
 import { Col, Row } from "react-bootstrap";
 import cardTypes from "@/types/cardType";
 import TextBloc from "@/components/commons/text-boc";
+import Title from "@/components/commons/title";
+import getMediaUrl from "@/utils/getMediaUrl";
 
-function Motto({ items: { items, headline } }) {
+function Motto({ items: { items, headline, titleBackground } }) {
   return (
     <div className="motto-col">
-      <h3>{headline}</h3>
+      <Title
+        backgroundImage={getMediaUrl(titleBackground)}
+        className="title-light"
+      >
+        <h3>{headline}</h3>
+      </Title>
       <Row md="3" xs="1" id="motto-row">
         {items.map((item) => (
           <Col>
