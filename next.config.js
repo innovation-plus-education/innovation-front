@@ -1,5 +1,8 @@
 module.exports = {
   reactStrictMode: true,
+  experimental: {
+    outputStandalone: true,
+  },
   webpackDevMiddleware: (config) => {
     // eslint-disable-next-line no-param-reassign
     config.watchOptions = {
