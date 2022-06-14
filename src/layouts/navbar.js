@@ -10,11 +10,10 @@ function NavBar({ navbar: { homepage, navigables } }) {
         <Navbar.Brand href={homepage.link}>
           <img
             src={getMediaUrl(homepage.logo)}
-            width="30"
+            width="100"
             height="30"
             alt={homepage.link}
           />
-          INNOVATION
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
