@@ -6,12 +6,13 @@ import ExamComponent from "../exam";
 function ExamMobileComponent({ exams }) {
   return (
     <Carousel slide className="em-carousel" variant="dark" controls={false}>
-      {exams.map(({ attributes: { name, location, date, brand } }) => (
+      {exams.map(({ attributes: { name, location, date, brand, resume } }) => (
         <Carousel.Item>
           <ExamComponent
             name={name}
             brand={brand}
             location={location}
+            resume={resume}
             date={date}
           />
           <Carousel.Caption className="em-column">

@@ -35,7 +35,7 @@ export const getUpComingExams = async () => {
 };
 
 export const getExam = async (id) => {
-  const populate = queryWithPopulate(["brand", "courses"]);
+  const populate = queryWithPopulate(["brand", "courses", "topics"]);
   const fields = queryWithFields([
     "id",
     "name",
