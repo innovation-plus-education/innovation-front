@@ -1,15 +1,23 @@
 .upcoming-exams-raw {
     .exams-card {
         color: $white;
-        background-color: $cyan-700;
-        .btn {
-            border-color: $white;
-            color: $white; 
+        opacity: 1;
+        background-color: $red;
+        .icon-group {
+            .card-text {
+                background-color: $white;
+                color: $red;
+            }
         }
-        .btn:hover {
-            background-color: $white;
+        .card-title {
+            color: $red;
+            background-color: $red-100;
+        }
+        .btn {
+            color: $red;
             border-color: $white;
-            color: $cyan-700;
+            background-color: $white;
+            box-shadow: 4px 2px 2px $red-100;
         }
         .btn:focus {
             box-shadow: none;

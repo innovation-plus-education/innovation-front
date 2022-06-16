@@ -8,11 +8,12 @@ function ExamBloc({ exams }) {
   const centerBloc = exams.length < 4 ? "justify-content-md-center" : "";
   return (
     <Row lg={4} md={2} xs={1} className={`eb-raw equal ${centerBloc} ep-raw`}>
-      {exams.map(({ attributes: { name, location, date }, id }) => (
+      {exams.map(({ attributes: { name, location, date, resume }, id }) => (
         <ExamComponent
           name={name}
           location={location}
           date={moment(date).format("DD/MM/YYYY")}
+          resume={resume}
           className="eb-exams"
           id={id}
           key={id}

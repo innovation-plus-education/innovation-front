@@ -1,36 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Card, Col } from "react-bootstrap";
-import TextRawColumns from "@/components/commons/text-row-columns";
 import { examType } from "@/types/examsType";
 import moment from "moment";
+import InnovationIcon from "@/components/commons/innovation-icon";
 
-function ExamComponent({ name, location, date, className, id }) {
+function ExamComponent({ name, location, date, className, id, resume }) {
   return (
     <Col className={`exam-col-component ${className}`}>
       <Card className="exams-card">
         <Card.Body>
           <Card.Title>{name}</Card.Title>
-          <Card.Text as="div">
-            <TextRawColumns label="Where" value={location} icon="compass" />
-          </Card.Text>
-          <Card.Text as="div">
-            <TextRawColumns
-              label="When"
-              value={moment(date).format("DD/MM/YYYY")}
-              icon="calendar"
-            />
-          </Card.Text>
-          <div className="eb-link">
-            <Button
-              variant="outline-innovation-dark"
-              size="sm"
-              href={`/exams/${id}`}
-            >
-              Voir plus
-            </Button>
-          </div>
+          <Card.Text>{resume}</Card.Text>
         </Card.Body>
+        <Card.Body className="icon-group">
+          <Card.Text as="div">
+            <InnovationIcon icon="location-arrow" />
+            <span>{location}</span>
+          </Card.Text>
+          <Card.Text as="div">
+            <InnovationIcon icon="calendar" type="far" />
+            <span>{moment(date).format("DD/MM/YYYY")}</span>
+          </Card.Text>
+        </Card.Body>
+        <div className="eb-link">
+          <Button variant="innovation-dark" href={`/exams/${id}`}>
+            Voir plus
+          </Button>
+        </div>
       </Card>
     </Col>
   );

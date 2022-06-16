@@ -4,7 +4,7 @@ import queryWithPopulate, { customQuery, queryWithFields } from "../lib/qs";
 
 const getExams = async () => {
   const populate = queryWithPopulate(["brand"]);
-  const fields = queryWithFields(["id", "name", "location", "date"]);
+  const fields = queryWithFields(["id", "name", "location", "date", "resume"]);
   const filters = customQuery({
     filters: {
       date: {
@@ -32,6 +32,21 @@ export const getUpComingExams = async () => {
   };
   const params = customQuery(query);
   return axios.get(`/exams?${params}`).then((res) => res.data);
+};
+
+export const getExam = async (id) => {
+  const populate = queryWithPopulate(["brand", "courses"]);
+  const fields = queryWithFields([
+    "id",
+    "name",
+    "location",
+    "date",
+    "description",
+  ]);
+
+  return axios
+    .get(`/exams/${id}?${populate}&${fields}`)
+    .then((res) => res.data);
 };
 
 export const getExamsPage = async () =>

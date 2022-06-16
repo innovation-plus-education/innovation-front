@@ -4,27 +4,48 @@
     height: 100%;
     width: 100%;
     .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 200px;
+        padding: 0.5em;
     }
-    .text-raw-label-col {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        .text-raw-label {
-            margin-left: 0.3em;
-        }
+    .card-title {
+        text-align: center;
+        background-color: $light;
+        padding: 0.25em;
     }
-    .text-raw-value-col {
+    p.card-text {
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
-        padding: 0;
+        padding: 0.5em;
+        height: 150px;
+    }
+    .icon-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        .card-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $cyan-700;
+            color: white;
+            font-size: medium;
+            padding: 0 1em;
+            border-radius: 10px;
+            margin-bottom: 0.5em;
+            span {
+                margin-left: 0.5em;
+            }
+        }
     }
     .eb-link {
+        padding: 1em;
         display: flex;
         justify-content: flex-end;
+        .btn {
+            box-shadow: 4px 2px 2px $gray-200;
+        }
+        .btn:hover {
+            box-shadow: none;
+        }
     }
 }

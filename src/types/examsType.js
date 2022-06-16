@@ -5,6 +5,7 @@ export const examType = {
   location: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
+  resume: PropTypes.string.isRequired,
 };
 const examsType = PropTypes.arrayOf(PropTypes.shape(examType.isRequired));
 

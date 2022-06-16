@@ -8,12 +8,7 @@ function NavBar({ navbar: { homepage, navigables } }) {
     <Navbar bg="innovation-light" expand="lg" className="innovation-navbar">
       <Container>
         <Navbar.Brand href={homepage.link}>
-          <img
-            src={getMediaUrl(homepage.logo)}
-            width="100"
-            height="30"
-            alt={homepage.link}
-          />
+          <img src={getMediaUrl(homepage.logo)} alt={homepage.link} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
