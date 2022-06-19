@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import cardTypes from "@/types/cardType";
 import getMediaUrl from "@/utils/getMediaUrl";
 import CircleImg from "@/components/commons/circle-img";
@@ -9,7 +9,7 @@ import Title from "@/components/commons/title";
 
 function NavigationBloc({ items: { items, title, titleBackground } }) {
   return (
-    <Container className="nb-container">
+    <div className="nb-container">
       <Title
         backgroundImage={getMediaUrl(titleBackground)}
         className="title-light"
@@ -37,7 +37,7 @@ function NavigationBloc({ items: { items, title, titleBackground } }) {
             </Col>
           ))}
       </Row>
-    </Container>
+    </div>
   );
 }
 NavigationBloc.propTypes = {

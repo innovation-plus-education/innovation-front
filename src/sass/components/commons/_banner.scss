@@ -8,4 +8,7 @@
         background-color: $cyan-700;
         border: none;
     }
+    @include media-breakpoint-down('md') {
+        height: 250px;
+    }
 }

@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 
 function Title({ children, className, backgroundImage }) {
   return (
-    <div className="title-component">
+    <div
+      className="title-component"
+      style={{ "background-image": `url(${backgroundImage})` }}
+    >
       {React.cloneElement(children, {
         className,
-        style: { "background-image": `url(${backgroundImage})` },
       })}
     </div>
   );

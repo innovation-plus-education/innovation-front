@@ -18,7 +18,9 @@ function InnovationApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <NavBar navbar={navbar} />
-      <Component {...pageProps} />
+      <main role="main">
+        <Component {...pageProps} />
+      </main>
       <ReactQueryDevtools initialIsOpen={false} />
       <Footer items={footer} />
     </QueryClientProvider>

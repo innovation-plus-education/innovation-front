@@ -1,4 +1,6 @@
 html {
+    position: relative;
+    min-height: 100%;
     body {
         h1,h2,h3,h4,h5,h6 {
             font-family: $roboto;
@@ -16,60 +18,22 @@ html {
             font-family: $font-vaani;
             font-weight: 300;
         }
-        .app-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        main {
+            padding-bottom: 60px;
         }
-        .d-f-c {
-            display: flex;
-            flex-direction: column;
-        }
-        .title-light {
-            width: 300px;
-            text-align: center;
-            padding: 0.2em;
-            color: $cyan-700;
-            background-color: $light;
-            border-radius: 10px;
-        }
-        .exam-information {
-            margin: 1em;
-            padding: 1em;
-            display: flex;
-            justify-content: flex-end;
-            .information-row {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background-color: $cyan-700;
-                color: white;
-                font-size: medium;
-                padding: 0.5em 1em;
-                border-radius: 10px;
-                margin: 1em;
-                span {
-                    margin-left: 0.5em;
-                }
-            }
-            @include media-breakpoint-down ('md'){
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                .information-row {
-                    width: 100%;
-                    justify-content: center;
-                    margin: 1em 0;
-                }
-            }
-        }
-        .side-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            .side-info-list {
-                margin: 1em 0;
-            }
-        }
+    }
+    .app-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .d-f-c {
+        display: flex;
+        flex-direction: column;
+    }
+    .title-light {
+        text-align: center;
+        padding: 0.2em;
+        color: $light;
     }
 }

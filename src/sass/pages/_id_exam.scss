@@ -1,0 +1,56 @@
+.exam-title {
+    text-align: center;
+    background-color: $cyan-700;
+    color: white;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: 10px 4px 4px $gray-200;
+}
+.exam-description {
+    background-color: $light;
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        color: $cyan-700;
+    }
+}
+.exam-information {
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    .information-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $cyan-700;
+        color: white;
+        font-size: medium;
+        padding: 0.5em 1em;
+        border-radius: 10px;
+        margin: 1em;
+        span {
+            margin-left: 0.5em;
+        }
+    }
+    @include media-breakpoint-down ('md'){
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .information-row {
+            width: 100%;
+            justify-content: center;
+            margin: 1em 0;
+        }
+    }
+}
+.side-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .side-info-list {
+        margin: 1em 0;
+    }
+}
