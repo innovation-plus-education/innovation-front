@@ -1,4 +1,4 @@
-.course-page-header {
+.courses-page-header {
     .hstack {
         padding: 1em;
         align-items: center;
@@ -17,16 +17,19 @@
         }
         .title-component {
             color: $cyan-700;
+            .courses-page-header-title {
+                text-align: center;
+            }
         }
     }
 }
 
-.course-page-body {
+.courses-page-body {
     margin: 1em 0;
     .col {
        margin: 0.5em 0; 
     }
-    .course-page-cards {
+    .courses-page-cards {
         height: 100%;
         background-color: $cyan-700;
         color: white;

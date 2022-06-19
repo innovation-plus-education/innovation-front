@@ -40,21 +40,21 @@ function Courses({ coursePage }) {
   }
   return (
     <Container>
-      <Row className="course-page-header">
+      <Row className="courses-page-header">
         <Stack direction="horizontal" gap={2}>
           <CircleImg src={getMediaUrl(image)} />
           <div>
-            <Title>
+            <Title className="courses-page-header-title">
               <h3>{pageTitle}</h3>
             </Title>
             <TextBloc text={description} />
           </div>
         </Stack>
       </Row>
-      <Row className="course-page-body" md="4" xs="1">
+      <Row className="courses-page-body" md="4" xs="1">
         {data.data.map(({ attributes: { title, activities }, id }) => (
           <Col>
-            <Card className="course-page-cards">
+            <Card className="courses-page-cards">
               <Card.Header>{title}</Card.Header>
               <Card.Body>
                 <Card.Title>Related activites</Card.Title>
