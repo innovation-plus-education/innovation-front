@@ -26,9 +26,9 @@ export default function HomePage({ homepageComponents }) {
         title={banner.title}
       />
       <Container>
-        <InfoBloc item={infoBloc} />
-        <Motto items={mottos} />
-        <NavigationBloc items={categories} />
+        {infoBloc && <InfoBloc item={infoBloc} />}
+        {mottos && <Motto items={mottos} />}
+        {categories && <NavigationBloc items={categories} />}
       </Container>
     </>
   );

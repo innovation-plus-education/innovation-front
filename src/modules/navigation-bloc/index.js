@@ -16,7 +16,7 @@ function NavigationBloc({ items: { items, title, titleBackground } }) {
       >
         <h3>{title}</h3>
       </Title>
-      <Row xs={1} md={4} className="nb-row">
+      <Row xs={1} md={2} lg={4} className="nb-row">
         {items &&
           items.map((item) => (
             <Col>

@@ -10,6 +10,16 @@ const queryWithPopulate = (relations) =>
     }
   );
 
+export const queryWithPopulateAll = () =>
+  qs.stringify(
+    {
+      populate: "*",
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
 export const queryWithFields = (fields) =>
   qs.stringify(
     {

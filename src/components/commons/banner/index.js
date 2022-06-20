@@ -9,7 +9,7 @@ function Banner({ description, title, image }) {
   return (
     <div className="innovation-banner-row">
       <Card className="banner-dark text-white">
-        <Card.Img src={getMediaUrl(image)} alt="Card image" height={500} />
+        <Card.Img src={getMediaUrl(image)} alt="Card image" fluid />
       </Card>
     </div>
   );

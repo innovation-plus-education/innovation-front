@@ -14,22 +14,32 @@
             margin-bottom: 1em;
         }
         .motto-header {
-            margin-bottom: 1em;
-            h4 {
-                margin: 0;
+            .subtitle {
+                margin-left: 0.5em;
                 text-align: center;
-                font-weight: inherit;
+                color: $cyan-700;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1em;
+            .rounded-circle {
+                background-color: $light;
             }
         }
         .motto-card {
-            background-color: $cyan-700;
-            border-radius: 1em;
-            padding: 1em;
-            color: $white;
-            display: flex;
-            flex-direction: column;
-            background-clip: border-box;
-            box-shadow: 2px 2px 5px $gray-400;
+            .motto-paragraph {
+                background-color: $cyan-700;
+                border-radius: 10px;
+                padding: 1em;
+                color: $white;
+                box-shadow: 2px 2px 5px $gray-400;
+                height: 100px;
+                overflow: hidden;
+                @include media-breakpoint-down('md') {
+                    height: auto;
+                }
+            }
         }
     }
 }

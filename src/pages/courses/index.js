@@ -71,7 +71,7 @@ function Courses({ coursePage }) {
               <Card.Link as="div">
                 <Button
                   variant="outline-innovation-light"
-                  href={`/course/${id}`}
+                  href={`/courses/${id}`}
                 >
                   view more
                 </Button>

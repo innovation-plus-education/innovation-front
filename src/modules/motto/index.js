@@ -5,6 +5,7 @@ import cardTypes from "@/types/cardType";
 import TextBloc from "@/components/commons/text-boc";
 import Title from "@/components/commons/title";
 import getMediaUrl from "@/utils/getMediaUrl";
+import CircleImg from "@/components/commons/circle-img";
 
 function Motto({ items: { items, headline, titleBackground } }) {
   return (
@@ -17,13 +18,16 @@ function Motto({ items: { items, headline, titleBackground } }) {
       </Title>
       <Row md="3" xs="1" id="motto-row">
         {items.map((item) => (
-          <Col>
-            <div className="motto-card">
-              <div className="motto-header">
-                <h4 className="subtitle">{item.title}</h4>
-              </div>
-              <TextBloc text={item.description} />
+          <Col className="motto-card">
+            <div className="motto-header">
+              <CircleImg
+                src={getMediaUrl(item.media)}
+                alt={item.title}
+                height={100}
+              />
+              <h3 className="subtitle">{item.title}</h3>
             </div>
+            <TextBloc className="motto-paragraph" text={item.description} />
           </Col>
         ))}
       </Row>

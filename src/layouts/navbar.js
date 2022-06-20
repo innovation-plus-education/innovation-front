@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Image, Nav, Navbar } from "react-bootstrap";
 import getMediaUrl from "../utils/getMediaUrl";
 
 function NavBar({ navbar: { homepage, navigables } }) {
@@ -8,7 +8,11 @@ function NavBar({ navbar: { homepage, navigables } }) {
     <Navbar bg="innovation-light" expand="lg" className="innovation-navbar">
       <Container>
         <Navbar.Brand href={homepage.link}>
-          <img src={getMediaUrl(homepage.logo)} alt={homepage.link} />
+          <Image
+            src={getMediaUrl(homepage.logo)}
+            alt={homepage.link}
+            width="150"
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

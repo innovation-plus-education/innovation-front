@@ -10,5 +10,8 @@
     }
     @include media-breakpoint-down('md') {
         height: 250px;
+        .card-img {
+            height: 250px;
+        }
     }
 }

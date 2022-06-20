@@ -5,7 +5,7 @@ export const getHomepageComponents = async () => {
     .get("/homepage", {
       params: {
         populate:
-          "mottos.items,mottos.titleBackground,categories.items,categories.items.image,categories.titleBackground,banner.image,info_bloc.item.image",
+          "mottos.items,mottos.items.media,mottos.titleBackground,categories.items,categories.items.image,categories.titleBackground,banner.image,info_bloc.item.media",
       },
     })
     .then((res) => res.data);
