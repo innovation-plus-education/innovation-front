@@ -6,9 +6,8 @@ import { useQuery } from "react-query";
 
 function Courses() {
   const router = useRouter();
-  const { data, isLoading, error } = useQuery(
-    ["getCourse", router.query.id],
-    () => getCourse(router.query.id)
+  const { isLoading, error } = useQuery(["getCourse", router.query.id], () =>
+    getCourse(router.query.id)
   );
   if (isLoading) {
     return <span>is loading...</span>;
