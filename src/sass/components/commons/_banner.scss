@@ -8,10 +8,10 @@
         background-color: $cyan-700;
         border: none;
     }
+    .card-img {
+        height: 100%;
+    }
     @include media-breakpoint-down('md') {
         height: 250px;
-        .card-img {
-            height: 250px;
-        }
     }
 }
